@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+
+	<parent>
+		<groupId>com.yodlee.iae.bugr</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+		<artifactId>bugr</artifactId>
+	</parent>
+	<artifactId>webapp</artifactId>
+	<name>webapp</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<start-class>com.yodlee.iae.bugr.app.BugRApplication</start-class>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.yodlee.iae.bugr</groupId>
+			<artifactId>rest-services</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.yodlee.iae.bugr</groupId>
+			<artifactId>scheduler</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<executable>true</executable>
+				</configuration>
+			</plugin>
+		</plugins>
+			<resources>
+			<resource>
+				<directory>src/main/resource</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		
+	</build>
+	<packaging>jar</packaging>
+
+</project>

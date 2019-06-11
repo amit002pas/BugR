@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd"
+	updateCheck="true"
+	monitoring="autodetect"
+	dynamicConfig="true">
+	<diskStore path="java.io.tmpdir"/>
+	<cache name="cached_all_bugs"
+		eternal="false"
+		maxEntriesLocalHeap="100000"
+		maxEntriesLocalDisk="100000" 
+		diskSpoolBufferSizeMB="20000"
+		memoryStoreEvictionPolicy="LFU"
+		transactionalMode="off">
+	</cache>
+</ehcache> 
